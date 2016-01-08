@@ -1,0 +1,355 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\definecolor{darkblue}{RGB}{0,4,106}
+\usepackage{doi}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+\allowdisplaybreaks
+\tikzset{test/.style={font=\sffamily\huge}}
+\DeclareMathVersion{sfnums}
+\usepackage{apjfonts}
+\end_preamble
+\options numbers,sort&compress
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans helvet
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing other 1.05
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 2
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "citecolor=darkblue,urlcolor=darkblue,linkcolor=darkblue"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+The evolution of offspring size in temporally varying environments
+\end_layout
+
+\begin_layout Section
+Methods
+\end_layout
+
+\begin_layout Standard
+Here we extend classical life-history theory models on the evolution of
+ offspring size 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Smith1974,Parker1986"
+
+\end_inset
+
+ by allowing offspring size 
+\begin_inset Formula $z_{t}$
+\end_inset
+
+ to be a function of genetic adaptation, plasticity, maternal effects (with
+ potential transgenerational carry-over) and bet-hedging.
+ 
+\end_layout
+
+\begin_layout Subsection
+Phenotypes
+\end_layout
+
+\begin_layout Standard
+Offspring size 
+\begin_inset Formula $z_{t}$
+\end_inset
+
+ in generation 
+\begin_inset Formula $t$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{align}
+z_{t} & =a_{t}+b_{t}\kappa_{t-\tau}+m_{t}R_{t-T}+\gamma\left(s_{t}\right)\label{eq:offspring_size}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+ is the elevation of the offspring size reaction norm (reflecting the genes
+ expressed by the offspring), 
+\begin_inset Formula $b_{t}$
+\end_inset
+
+ is the genetically encoded slope of the reaction norm that determines the
+ phenotypic response to the environmental cue 
+\begin_inset Formula $\kappa_{t-\tau}$
+\end_inset
+
+.
+ Here, 
+\begin_inset Formula $\tau$
+\end_inset
+
+ indicates the time point prior to selection when an individual is exposed
+ to environmental information 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lande2009"
+
+\end_inset
+
+.
+ Next, 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+ is a genetically encoded maternal effect coefficient that allows offspring
+ to modulate their size dependent on maternal resources 
+\begin_inset Formula $R_{t-T}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Kirkpatrick1989,Kuijper2015"
+
+\end_inset
+
+, where 
+\begin_inset Formula $T$
+\end_inset
+
+ indicates the time point prior to selection when an individual is exposed
+ to maternal resources (with 
+\begin_inset Formula $T\geq\tau$
+\end_inset
+
+).
+ Finally, 
+\begin_inset Formula $\gamma(s_{t})$
+\end_inset
+
+ is a normally distributed stochastic variable reflecting the amount of
+ diversifying bet-hedging 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Bull1987,Svardal2011"
+
+\end_inset
+
+ as a function of the evolving environmental standard deviation 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ with 
+\begin_inset Formula $\gamma(s_{t})\sim\mathcal{N}(0,s_{t}^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Fitness
+\end_layout
+
+\begin_layout Standard
+The number of adults born from a mother with resource level 
+\begin_inset Formula $R_{t-T}$
+\end_inset
+
+ is then given by
+\begin_inset Formula 
+\begin{align}
+w_{t} & =\frac{R_{t-\tau}}{\tilde{z}_{t}}g\left(z_{t}\right)\label{eq:offspring_size-1}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{z}_{t}$
+\end_inset
+
+ is the phenotype averaged over all brood members and 
+\begin_inset Formula $g(z_{t})$
+\end_inset
+
+ the survival probability of an individual offspring.
+ We use two often-used functions for juvenile survival
+\begin_inset Formula 
+\begin{align*}
+g_{1}\left(z_{t}\right) & =1-\mathrm{exp}\left[-c\left(z_{t}-z_{\mathrm{min},t}\right)\right]
+\end{align*}
+
+\end_inset
+
+where survival strictly increases with size, yet in a decelerating fashion.
+ The parameter 
+\begin_inset Formula $c$
+\end_inset
+
+ reflects how rapidly survival increases with size, while 
+\begin_inset Formula $z_{\mathrm{min},t}$
+\end_inset
+
+ reflects the size below which no survival is possible.
+ We let 
+\begin_inset Formula $z_{\mathrm{min},t}$
+\end_inset
+
+ covary with the environmental variation (see below).
+\end_layout
+
+\begin_layout Subsection
+Environmental variation
+\end_layout
+
+\begin_layout Standard
+We consider a temporally fluctuating environment 
+\begin_inset Formula $\varepsilon_{t}$
+\end_inset
+
+ that varies both through seasonal and stochastic fluctuations
+\begin_inset Formula 
+\begin{align}
+\varepsilon_{t} & =A\mathrm{sin}\left(t\right)+x_{t},\label{eq:envt_fluct}
+\end{align}
+
+\end_inset
+
+where the sinusoid reflects seasonal fluctuations with amplitude 
+\begin_inset Formula $A$
+\end_inset
+
+ and frequency 
+\begin_inset Formula $f$
+\end_inset
+
+, while stochastic fluctuations are given by the random variable 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+, which is given by the Gaussian autoregressive process
+\begin_inset Formula 
+\begin{align}
+x_{t} & =\nu x_{t-1}+\omega_{t},\quad\omega_{t}\sim\mathcal{N}\left(0,\sigma_{x}^{2}\right),\label{eq:guassian_AR}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $\nu$
+\end_inset
+
+ is a parameter controlling the degree of correlation between successive
+ generations and 
+\begin_inset Formula $\sigma_{x}^{2}$
+\end_inset
+
+ controls the amount of stochasticity.
+\end_layout
+
+\begin_layout Subsubsection
+Environmental variation in life-history parameters
+\end_layout
+
+\begin_layout Standard
+How does stochastic and seasonal variation translate into variation of the
+ relevant life-history parameters, such as maternal resources 
+\begin_inset Formula $R_{t}$
+\end_inset
+
+ and juvenile survival 
+\begin_inset Formula $w_{t}$
+\end_inset
+
+? We assume that 
+\begin_inset Formula $\varepsilon_{t}$
+\end_inset
+
+ translates into resource variation by 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/Users/bram/Projects/databases/transgenerational"
+options "bram"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

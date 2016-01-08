@@ -1,0 +1,12 @@
+*~
+*.gif
+*.jpg
+*.svg
+*.swp
+*.png
+iter_*
+sim_*
+graph_sim_*
+graph_iter_*
+*.csv
+x*
