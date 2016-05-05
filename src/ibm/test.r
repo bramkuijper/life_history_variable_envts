@@ -1,8 +1,14 @@
 # map a gaussian distribution to a uniform
 library(pracma)
 library(lattice)
-k <- rnorm(1000,mean=0,sd=1)
 
-z <- .5 * erfc(-k / sqrt(2))
 
-print(hist(z))
+t <- 1:200
+
+p <- 0.05
+
+et1 <- .5 + .5 * sin(t)
+
+et2 <-  runif(t)
+
+print(xyplot(et1 + et2 ~ t,type="l"))
