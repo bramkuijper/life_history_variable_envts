@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import numpy as np
 
@@ -20,7 +20,7 @@ ampl = [ 0, 0.1, 0.5, 1.0 ]
 
 stoch = [ 0, 0.1, 0.5, 1.0 ]
 
-exe = "./xseasonality"
+exe = "./xseasonality_thr"
 
 sd_envt = 1.0
 

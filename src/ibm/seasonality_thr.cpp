@@ -403,9 +403,12 @@ void reproduce()
         }
     }
 
+    assert(Nnonrep + Nrep > 0);
+    assert(Nnonrep + Nrep <= Npop);
+
     size_t father = 0;
 
-    // now let the nonreproductives die or reproduce
+    // now let the reproductives die or reproduce
     for (int rep_i = 0; rep_i < Nrep; ++rep_i)
     {
         // increment time counter
@@ -455,10 +458,10 @@ void reproduce()
             --Nrep;
 
             assert(Nrep >= 0);
-            assert(Nrep < Npop);
+            assert(Nrep <= Npop);
             assert(rep_i >= -1);
             assert(Nnonrep >= 0);
-            assert(Nnonrep < Npop);
+            assert(Nnonrep <= Npop);
         }
     }
 }
