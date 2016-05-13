@@ -92,7 +92,6 @@ plt.subplot(num_rows,1,4)
 plt.plot(histdat["time"],histdat["Nrep"],'#129aff',
         histdat["time"],histdat["Nnonrep"],'#a60090',
         histdat["time"],histdat["Noff"],'#c74c4c',
-        histdat["time"],histdat["Nrecov"],'#000000',
         linewidth=1)
 plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='on')
 plt.ylabel(r'$n_{i}$')
@@ -124,7 +123,6 @@ plt.subplot(num_rows,1,7)
 plt.plot(histdat_sub["time"],histdat_sub["Nrep"],'#129aff',
         histdat_sub["time"],histdat_sub["Nnonrep"],'#a60090',
         histdat_sub["time"],histdat_sub["Noff"],'#c74c4c',
-        histdat_sub["time"],histdat_sub["Nrecov"],'#000000',
         linewidth=1)
 plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='on')
 plt.ylabel(r'$n_{i}$')
