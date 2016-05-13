@@ -92,14 +92,15 @@ plt.subplot(num_rows,1,4)
 plt.plot(histdat["time"],histdat["Nrep"],'#129aff',
         histdat["time"],histdat["Nnonrep"],'#a60090',
         histdat["time"],histdat["Noff"],'#c74c4c',
+        histdat["time"],histdat["Nrecov"],'#000000',
         linewidth=1)
-plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='off')
-plt.ylabel(r'$N_{i}$')
-plt.legend((r'$N_{r}$',r'$N_{n}$',r'$N_{\mathrm{off}}$'))
+plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='on')
+plt.ylabel(r'$n_{i}$')
+plt.legend((r'$N_{r}$',r'$N_{n}$',r'$N_{\mathrm{off}}$',r'$N_{\mathrm{recov}}$'))
 
 nrow_histdat = histdat.shape[0]
 
-histdat_sub = histdat.iloc[range(nrow_histdat-250,nrow_histdat,1),:]
+histdat_sub = histdat.iloc[range(nrow_histdat-100,nrow_histdat,1),:]
 
 # zoomed in bit
 
@@ -107,7 +108,7 @@ histdat_sub = histdat.iloc[range(nrow_histdat-250,nrow_histdat,1),:]
 plt.subplot(num_rows,1,5)
 plt.plot(histdat_sub["time"],histdat_sub["environment"],'b',
         histdat_sub["time"],histdat_sub["mean_ntime"],'g',linewidth=1)
-plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='off')
+plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='on')
 plt.ylabel(r'Breeding prob, $\bar{p}_{t}$')
 plt.legend((r'$\varepsilon_{t}$',r'$\bar{\tau}_{t}$'))
 
@@ -115,7 +116,7 @@ plt.legend((r'$\varepsilon_{t}$',r'$\bar{\tau}_{t}$'))
 plt.subplot(num_rows,1,6)
 plt.plot(
         histdat_sub["time"],histdat_sub["mean_p"],'r',linewidth=1)
-plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='off')
+plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='on')
 plt.ylabel(r'Breeding prob, $\bar{p}_{t}$')
 plt.ylim((0,1))
 
@@ -123,10 +124,11 @@ plt.subplot(num_rows,1,7)
 plt.plot(histdat_sub["time"],histdat_sub["Nrep"],'#129aff',
         histdat_sub["time"],histdat_sub["Nnonrep"],'#a60090',
         histdat_sub["time"],histdat_sub["Noff"],'#c74c4c',
+        histdat_sub["time"],histdat_sub["Nrecov"],'#000000',
         linewidth=1)
-plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='off')
+plt.tick_params(axis='x',which='both',bottom='on',top='on',labelbottom='on')
 plt.ylabel(r'$n_{i}$')
-plt.legend((r'$N_{r}$',r'$N_{n}$',r'$N_{\mathrm{off}}$'))
+plt.legend((r'$N_{r}$',r'$N_{n}$',r'$N_{\mathrm{off}}$',r'$N_{\mathrm{recov}}$'))
 
 def thr(h, envt):
     if envt > h:

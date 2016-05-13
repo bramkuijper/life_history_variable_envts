@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-./xseasonality_thr 0.02 0.0 0.02 0.01     0.1 0.1 2 1.0 0.0     1.0  0.0 1.0
+./xseasonality_date 0.02 0.0 0.01     0.2 0.05 2 8  1.0 1.0     2.0  0.0 1.0
 
-#    mu_h = atof(argv[1]);
-#    mu_a_tau = atof(argv[2]);
-#    mu_a_eps = atof(argv[3]);
-#    sdmu = atof(argv[4]);
-#    m_r = atof(argv[5]);
-#    m_n = atof(argv[6]);
-#    b = atoi(argv[7]);
+#    mu_a_tau = atof(argv[1]);
+#    mu_a_eps = atof(argv[2]);
+#    sdmu = atof(argv[3]);
+#    m_r = atof(argv[4]);
+#    m_n = atof(argv[5]);
+#    b = atoi(argv[6]);
+#    brec = atoi(argv[7]);
 #    clutch_multiplier = atof(argv[8]);
 #    min_clutch = atof(argv[9]);
 #    ampl = atof(argv[10]);
